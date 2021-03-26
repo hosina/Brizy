@@ -139,7 +139,7 @@ class Brizy_Content_ContentPlaceholder {
 		}
 
 		if($thowIfNotFound) {
-			throw new Exception("The is not attribute '{$name}' set.");
+			throw new Exception("The attribute '{$name}' is not set.");
 		}
 
 		return null;
