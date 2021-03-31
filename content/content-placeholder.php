@@ -133,7 +133,7 @@ class Brizy_Content_ContentPlaceholder {
 	 *
 	 * @return null
 	 */
-	public function getAttr( $name, $thowIfNotFound = false ) {
+	public function getAttr( $name, $thowIfNotFound = false, $default=null ) {
 		if ( isset( $this->attributes[ $name ] ) ) {
 			return $this->attributes[ $name ];
 		}
@@ -142,7 +142,7 @@ class Brizy_Content_ContentPlaceholder {
 			throw new Exception("The attribute '{$name}' is not set.");
 		}
 
-		return null;
+		return $default;
 	}
 
 	/**
