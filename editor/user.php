@@ -132,7 +132,9 @@ class Brizy_Editor_User {
 			return false;
 		}
 
-		return is_admin() || is_super_admin();
+		$user = wp_get_current_user();
+
+		return ! ( false === array_search( 'administrator', $user->roles ) ) || is_super_admin();
 	}
 
 	public static function is_subscriber() {
